@@ -600,10 +600,8 @@ var Vote = function(){
             $("#"+commentLinkIdPrefix+postId).removeClass("comment-link-accepted");
         }
         else if(data.success == "1"){
-            var answers = ('div[id^="'+answerContainerIdPrefix +"']");
-            $(answers).removeClass("accepted-answer");
-            var commentLinks = ('div[id^="'+answerContainerIdPrefix +'"] div[id^="'+ commentLinkIdPrefix +'"]');
-            $(commentLinks).removeClass("comment-link-accepted");
+            $("#"+answerContainerIdPrefix+postId).removeClass("accepted-answer");
+            $("#"+commentLinkIdPrefix+postId).removeClass("comment-link-accepted");
 
             $("#"+answerContainerIdPrefix+postId).addClass("accepted-answer");
             $("#"+commentLinkIdPrefix+postId).addClass("comment-link-accepted");
